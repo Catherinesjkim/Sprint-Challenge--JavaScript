@@ -30,13 +30,41 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+  forEach() - executes a provided function once for each array element. It loops through the array while performing via a function or set of instructions for each element or array element. 
+
+  map() - creates a new array with the results of calling a provided function on every element in the calling array. We need an empty array to push the new information. 
+
+
 2. What is the difference between a function and a method?
+
+  A function is piece of code that is called by name. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed. It’s independent of an object. Functions can be on any other scope of the code and not all functions are methods. Things several entities can do, it doesn’t belong to any class in particular. Function => Free (not belonging to an object or class). Defined outside of classes. 
+
+  A method is a piece of code that is called by a name that is associated with an object. It’s a function that belongs to a class. It’s a mini function and an object. It’s the object-oriented word for ‘function’. All methods are functions. Things only one entity can do (dog = bark). Method => Member (A member of an object or class). 
 
 3. What is closure?
 
+  Closure controls what is and isn’t in scope in a particular function, along with which variables are shared between sibling functions in the same containing scope. Closures are frequently used in JS for object data privacy, in event handlers and callback functions, and in partial applications, currying, and other functional programming patterns. It’s a combination of a function bundled together (enclosed) with reference to its surrounding state (the lexical environment). A closure gives you access to an outer function’s scope from an inner function. In JS, closures are created every time a function is created, at function creation time. To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function. The inner function will have access to the variables in the outer function scope, even after the outer function has returned. 
+
 4. Describe the four rules of the 'this' keyword.
 
+  This: What is the calling object? 
+  
+  a. Default/window binding: Is the function called in the global scope? Window binding is like the forest of trees, not sure which one we are pointing at, so we point at the forest. 
+  
+  b. Implicit binding: Automatic with objects in methods. When a function is called by a preceding dot, the object before the dot is ‘this’. Implicit binding occurs when dot notation is used to invoke a function. 
+  
+  c. New binding: Is the function called by new? When a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function. Whatever is to the left of the dot becomes the context for ‘this’ in the function. 
+  
+  d. Explicit binding: Is the function called as a method, ie: obj.fun()? When JS’ call, apply or bind method is used, this is explicitly defined. You can force a function call to use a particular object for this binding, without putting a property function reference ont he object, so we explicitly say to a function what object it should use for this - mentioned abov
+
 5. Why do we need super() in an extended class?
+
+  We use extends keyword to set a class as a subclass. Extends tells super where to go. 
+  Super keyword is used to access and call functions on an object’s parent. To make sure that the parent class is called via the second class’ constructor so as to inherit the characteristics and behaviors of the parent class. The super keyword is used in 2 ways:
+
+  a. The super keyword used as a function which calls the parent class with parameters passed to the second object to make the second object an instance of the first object. 
+
+  b. The super keyword used as object which refers to the parent class. The super keyword is used to call the methods of the parent class explicitly. 
 
 ## Project Set up
 
